@@ -31,7 +31,7 @@ def main():
                 dataframe[i][j] = float(dataframe[i][j].strip('%'))/100
     dataframe.fillna(0,inplace=True)
 
-    if len(list(urllist)) > 2:
+    if len(urllist) > 1:
         titlelist.append(title)
         dflist.append(dataframe)
 
@@ -106,7 +106,7 @@ def main():
 for url in urllist:
     main()
 
-if len(urllist) > 2:
+if len(urllist) > 1:
     plt.figure(figsize=(50,50))
 
     total = plt.subplot(2,2,1)
